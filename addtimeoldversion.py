@@ -10,6 +10,7 @@ def add_time(start, duration,day=''):
         "Sunday":6
 
     }
+    
 
     time=parts[1]
     parts1=parts[0].split(':')
