@@ -59,6 +59,7 @@ def arithmetic_arranger(problems, show_answers=False):
             second_line.append(firstspace)
             third_line.append(firstspace)
             result_line.append(firstspace)
+            
 
     array = ''.join(first_line) + '\n' + ''.join(second_line) + '\n' + ''.join(third_line)
 
