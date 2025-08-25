@@ -78,20 +78,27 @@ def create_spend_chart(categories):
                 string=string+" o "
             else:
                 string=string+"   "
+        string=string+" "
         string=string+'\n'
-    string=string+"   "+'-'*(3*len(categories))+'-'+'\n'
-    for x in range(categories):
-        string=string+"   "
+    string += "    " + "-" * (3 * len(categories) + 1) + '\n'
+    lenmax=0
+    for x in categories:
+        if len(x.category)>lenmax:
+            lenmax=len(x.category)
+    c=0
+    while c < lenmax:
+
+        string=string+"    "
+        for x in categories:
+            if c<len(x.category):
+                string=string+" "+x.category[c]+" "
+            else:
+                string=string+"   "
+        string=string+" "
+        if c != lenmax - 1:
+            string += "\n"
+        c+=1
 
 
+    return  string
 
-
-
-
-food = Category('Food')
-food.deposit(1000, 'deposit')
-food.withdraw(10.15, 'groceries')
-food.withdraw(15.89, 'restaurant and more food for dessert')
-clothing = Category('Clothing')
-food.transfer(50, clothing)
-print(food)
