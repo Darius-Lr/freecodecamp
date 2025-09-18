@@ -1,0 +1,61 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"c7c2d857-70ad-414c-9b7b-a9c87304a685\" name=\"Changes\" comment=\"First part\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/Freecodecampallprojects.iml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/budgetapp.py\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/budgetapp.py\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Darius-Lr&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Darius-Lr/freecodecamp.git&quot;,\r\n    &quot;accountId&quot;: &quot;a01844ec-c8b2-4a7b-a4cf-ccc4cb9161c8&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"31bWD8eo59gZOZflpAcraIm5ohL\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Python.addtime.executor\": \"Run\",\r\n    \"Python.arithmeticformatter.executor\": \"Run\",\r\n    \"Python.budgetapp.executor\": \"Run\",\r\n    \"Python.polygonareacalculator.executor\": \"Run\",\r\n    \"Python.probabilitycalculator.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"ChangesTree.GroupingKeys\": [\r\n      \"directory\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"c7c2d857-70ad-414c-9b7b-a9c87304a685\" name=\"Changes\" comment=\"\" />\r\n      <created>1755793129965</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1755793129965</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first try\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755793245513</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755793245513</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Ready\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755806362381</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755806362381</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"first try second problem\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755849786954</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755849786954</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"finished\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755946884792</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755946884792</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Solved\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1756035871153</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1756035871153</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Solved\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1756057721826</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1756057721826</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"First part\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1756068544715</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1756068544715</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"OPEN_GENERIC_TABS\">\r\n      <map>\r\n        <entry key=\"4a18b9c5-942d-44d5-9d95-3d00d9ca3202\" value=\"TOOL_WINDOW\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"4a18b9c5-942d-44d5-9d95-3d00d9ca3202\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"first try\" />\r\n    <MESSAGE value=\"Ready\" />\r\n    <MESSAGE value=\"first try second problem\" />\r\n    <MESSAGE value=\"finished\" />\r\n    <MESSAGE value=\"Solved\" />\r\n    <MESSAGE value=\"First part\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"First part\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ b/.idea/workspace.xml	(date 1756127853746)
+@@ -4,14 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="c7c2d857-70ad-414c-9b7b-a9c87304a685" name="Changes" comment="First part">
+-      <change afterPath="$PROJECT_DIR$/.idea/Freecodecampallprojects.iml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/budgetapp.py" beforeDir="false" afterPath="$PROJECT_DIR$/budgetapp.py" afterDir="false" />
++    <list default="true" id="c7c2d857-70ad-414c-9b7b-a9c87304a685" name="Changes" comment="Solved(Yeaaah)">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -137,7 +131,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1756068544715</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="Almost ready">
++      <option name="closed" value="true" />
++      <created>1756111844164</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1756111844164</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Solved(Yeaaah)">
++      <option name="closed" value="true" />
++      <created>1756127155483</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1756127155483</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -168,6 +178,8 @@
+     <MESSAGE value="finished" />
+     <MESSAGE value="Solved" />
+     <MESSAGE value="First part" />
+-    <option name="LAST_COMMIT_MESSAGE" value="First part" />
++    <MESSAGE value="Almost ready" />
++    <MESSAGE value="Solved(Yeaaah)" />
++    <option name="LAST_COMMIT_MESSAGE" value="Solved(Yeaaah)" />
+   </component>
+ </project>
+\ No newline at end of file

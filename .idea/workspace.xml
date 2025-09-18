@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7c2d857-70ad-414c-9b7b-a9c87304a685" name="Changes" comment="Solved(Yeaaah)">
+      <change beforePath="$PROJECT_DIR$/addtime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/addtimeoldversion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arithmeticformatter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arithmeticoldversion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/budgetapp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/polygonareacalculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/probabilitycalculator.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Darius-Lr/freecodecamp.git",
+    "accountId": "a01844ec-c8b2-4a7b-a4cf-ccc4cb9161c8"
+  }
+}]]></component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "vcs.Git"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "repository"
+    ]
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>

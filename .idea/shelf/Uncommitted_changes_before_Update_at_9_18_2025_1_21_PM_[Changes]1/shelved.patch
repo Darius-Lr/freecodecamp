@@ -1,0 +1,481 @@
+Index: arithmeticformatter.py
+===================================================================
+diff --git a/arithmeticformatter.py b/arithmeticformatter.py
+deleted file mode 100644
+--- a/arithmeticformatter.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,49 +0,0 @@
+-def arithmetic_arranger(problems,show=False):
+-    if len(problems)>5:
+-        return 'Error: Too many problems.'
+-    string=""
+-    firstline=""
+-    secondline=""
+-    thirdline=""
+-    fourline=""
+-    for x in problems:
+-        string=string+x+" "
+-    parts=string.split()
+-    #check operator
+-    for operator in range(1,len(parts),3):
+-        if parts[operator]!='+' and parts[operator]!='-':
+-            return "Error: Operator must be '+' or '-'."
+-    #check numbers
+-    for i in range(0,len(parts),3):
+-        if len(parts[i])>4 or len(parts[i+2])>4:
+-            return 'Error: Numbers cannot be more than four digits.'
+-        if not parts[i].isdigit() or not parts[i+2].isdigit():
+-            return 'Error: Numbers must only contain digits.'
+-
+-        maxn=max(len(parts[i]),len(parts[i+2]))
+-        help=str(parts[i]).rjust(maxn+2)
+-        if parts[i+1]=="+":
+-            score=int(parts[i])+int(parts[i+2])
+-            fourline=fourline+str(score).rjust(maxn+2)+"    "
+-        else:
+-            score = int(parts[i]) - int(parts[i + 2])
+-            fourline = fourline + str(score).rjust(maxn + 2) + "    "
+-        firstline=firstline+help+"    "
+-        help=str(parts[i+1])+str(parts[i+2]).rjust(maxn+1)
+-        secondline=secondline+help+"    "
+-        thirdline=thirdline+'-'*(maxn+2)+"    "
+-    firstline=firstline[:-4]
+-    secondline = secondline[:-4]
+-    thirdline = thirdline[:-4]
+-    fourline=fourline[:-4]
+-
+-    result=firstline+'\n'+secondline+'\n'+thirdline
+-    if show==True:
+-        result=result+'\n'+fourline
+-    return result
+-
+-
+-
+-if __name__ == '__main__':
+-    result=arithmetic_arranger(["1 + 2", "1 - 9380"])
+-    print(result)
+Index: addtimeoldversion.py
+===================================================================
+diff --git a/addtimeoldversion.py b/addtimeoldversion.py
+deleted file mode 100644
+--- a/addtimeoldversion.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,62 +0,0 @@
+-def add_time(start, duration,day=''):
+-    parts=start.split()
+-    dictionarie={
+-        "Monday":0,
+-        "Tuesday": 1,
+-        "Wednesday": 2,
+-        "Thursday": 3,
+-        "Friday": 4,
+-        "Saturday": 5,
+-        "Sunday":6
+-
+-    }
+-    
+-
+-    time=parts[1]
+-    parts1=parts[0].split(':')
+-    hour=parts1[0]
+-    minutes=parts1[1]
+-    parts2=duration.split(':')
+-    add_hour=parts2[0]
+-    add_minutes=parts2[1]
+-    final_minutes=int(minutes)+int(add_minutes)
+-    if (final_minutes)>=60:
+-        final_hour=int(hour)+int(add_hour)+1
+-    else:
+-        final_hour=int(hour)+int(add_hour)
+-    xio=0
+-    if time=="PM":
+-        xio  =(final_hour+12)//24
+-    else:
+-        xio=final_hour//24
+-    period_changes = (final_hour // 12)
+-    n=""
+-    if xio==1:
+-        n=" (next day)"
+-    if xio>1:
+-        n=" ("+str(xio)+" days later)"
+-    if period_changes % 2 == 1:
+-        time = "PM" if time == "AM" else "AM"
+-
+-    final_minutes=final_minutes%60
+-    final_hour=final_hour%12
+-    aux_final_minutes=''
+-    if final_hour==0:
+-        final_hour="12"
+-    if final_minutes<10:
+-        aux_final_minutes='0'+str(final_minutes)
+-    else:
+-        aux_final_minutes = str(final_minutes)
+-    results=str(final_hour)+':'+aux_final_minutes+' '+time
+-    if day:
+-        day=day.capitalize()
+-        
+-        t = (dictionarie[day] + xio) % 7
+-        for key, value in dictionarie.items():
+-            if value == t:
+-                results +=", "+key
+-    results+=n
+-    return results
+-
+-
+-
+Index: addtime.py
+===================================================================
+diff --git a/addtime.py b/addtime.py
+deleted file mode 100644
+--- a/addtime.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,60 +0,0 @@
+-def add_time(start,duration,day=''):
+-    parts=start.split()
+-    tm=parts[1]
+-    numberday=0
+-    days ={
+-        "Monday": 0,
+-        "Tuesday": 1,
+-        "Wednesday": 2,
+-        "Thursday": 3,
+-        "Friday": 4,
+-        "Saturday": 5,
+-        "Sunday": 6
+-    }
+-    if day:
+-        day=day.capitalize()
+-        numberday=days[day]
+-    totaldays=0
+-    if tm=="PM":
+-        totaldays+=12
+-    parts1=parts[0].split(":")
+-    parts2=duration.split(":")
+-    parts1[0]=int(parts1[0])
+-    parts1[1] = int(parts1[1])
+-    parts2[0] = int(parts2[0])
+-    parts2[1] = int(parts2[1])
+-    time1=parts1[0]+parts2[0]
+-
+-    time2=parts1[1]+parts2[1]
+-    time1+=time2//60
+-    totaldays+=time1
+-    totaldays//=24
+-    time2=time2%60
+-    howmany=time1//12
+-    while howmany!=0:
+-        howmany-=1
+-        if tm=="AM":
+-            tm="PM"
+-        else:
+-            tm="AM"
+-    time1=time1%12
+-    time2=str(time2)
+-    if len(time2)<2:
+-        time2='0'+time2
+-    if time1==0:
+-        time1=12
+-    string=str(time1)+':'+time2+' '+tm
+-    numberday=(numberday+totaldays)%7
+-    if day:
+-        for key, value in days.items():
+-            if value == numberday:
+-                string+=", "+key
+-    if totaldays==1:
+-        string+=" (next day)"
+-    elif totaldays>1:
+-        string+=" ("+str(totaldays)+" days later)"
+-
+-    return string
+-
+-if __name__ == '__main__':
+-    add_time('3:30 PM', '2:12')
+Index: probabilitycalculator.py
+===================================================================
+diff --git a/probabilitycalculator.py b/probabilitycalculator.py
+deleted file mode 100644
+--- a/probabilitycalculator.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,42 +0,0 @@
+-import copy
+-import random
+-
+-class Hat:
+-    def __init__(self,**kwargs):
+-        self.contents=[]
+-        for color,number in kwargs.items():
+-            for x in range(number):
+-                self.contents.append(color)
+-
+-    def draw(self,numbers):
+-        balls=[]
+-        copycontents=[]
+-        if numbers>=len(self.contents):
+-            copycontents=self.contents[:]
+-            self.contents.clear()
+-            return copycontents
+-        for x  in range(numbers):
+-            x=random.choice(self.contents)
+-            balls.append(x)
+-            self.contents.remove(x)
+-        return balls
+-
+-
+-
+-def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+-    succes=0
+-    for x in range(num_experiments):
+-        copy_hat = copy.deepcopy(hat)
+-        ok =1
+-        result=copy_hat.draw(num_balls_drawn)
+-        for color in expected_balls:
+-            count=0
+-            for ball in result:
+-                if ball==color:
+-                    count+=1
+-            if count<expected_balls[color]:
+-                ok=0
+-        if ok==1:
+-            succes+=1
+-    return succes/num_experiments
+-
+Index: arithmeticoldversion.py
+===================================================================
+diff --git a/arithmeticoldversion.py b/arithmeticoldversion.py
+deleted file mode 100644
+--- a/arithmeticoldversion.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,71 +0,0 @@
+-def arithmetic_arranger(problems, show_answers=False):
+-    if len(problems) > 5:
+-        return 'Error: Too many problems.'
+-
+-    first_line = []
+-    second_line = []
+-    third_line = []
+-    result_line = []
+-
+-    for equation in problems:
+-        parts = equation.split()
+-        number1 = parts[0]
+-        operator = parts[1]
+-        number2 = parts[2]
+-        if number1.isdigit()==False or number2.isdigit()==False:
+-            return 'Error: Numbers must only contain digits.'
+-        if operator!='+' and operator!= '-':
+-            return "Error: Operator must be '+' or '-'."
+-        if len(number1)>4 or len(number2)>4:
+-            return 'Error: Numbers cannot be more than four digits.'
+-        maxi = max(len(number1), len(number2)) + 2  # Max width for alignment
+-
+-        # First line (number1)
+-        space1 = maxi - len(number1)
+-        space1_str = ""
+-        for _ in range(space1):
+-            space1_str += " "
+-        first_line.append(space1_str + number1)
+-
+-        # Second line (operator +  number2)
+-        space2 = maxi - len(number2) - 2
+-        space2_str = ""
+-        for _ in range(space2):
+-            space2_str += " "
+-        second_line.append(operator + " " + space2_str + number2)
+-
+-        # Third line (-----)
+-        dash_line = ""
+-        for _ in range(maxi):
+-            dash_line += "-"
+-        third_line.append(dash_line)
+-        if operator == '+':
+-            number3 = int(number1) + int(number2)
+-        else:
+-            number3 = int(number1) - int(number2)
+-
+-        rspace = maxi - len(str(number3))
+-        rspace_str = ""
+-        for _ in range(rspace):
+-            rspace_str += " "
+-        result_line.append(rspace_str + str(number3))
+-
+-
+-        firstspace=""
+-        if equation!=problems[-1]:
+-            for  x in range(4):
+-                firstspace+=' '
+-            first_line.append(firstspace)
+-            second_line.append(firstspace)
+-            third_line.append(firstspace)
+-            result_line.append(firstspace)
+-            
+-
+-    array = ''.join(first_line) + '\n' + ''.join(second_line) + '\n' + ''.join(third_line)
+-
+-    if show_answers:
+-        array += '\n' + ''.join(result_line)
+-
+-    return array
+-
+-print(f'\n{arithmetic_arranger(["3801 - 2", "123 + 49"])}')
+Index: budgetapp.py
+===================================================================
+diff --git a/budgetapp.py b/budgetapp.py
+deleted file mode 100644
+--- a/budgetapp.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,104 +0,0 @@
+-class Category:
+-    def __init__(self,category):
+-        self.category=category
+-        self.ledger=[]
+-        self.total=0
+-        self.twithdraw=0
+-    def check_funds(self,amount):
+-        if amount>self.total:
+-            return  False
+-        return True
+-    def deposit(self,amount,description=""):
+-        dictionary={}
+-        dictionary["amount"]=amount
+-        dictionary["description"]=description
+-        self.ledger.append(dictionary)
+-
+-        self.total+=amount
+-    def withdraw(self,amount,description=""):
+-        if self.check_funds(amount)==False:
+-            return False
+-        dictionary = {}
+-        dictionary["amount"] = -amount
+-        dictionary["description"] = description
+-        self.ledger.append(dictionary)
+-        self.total-=amount
+-        self.twithdraw+=amount
+-        return True
+-    def get_balance(self):
+-        return self.total
+-    def transfer(self,amount,other):
+-        if self.check_funds(amount)==False:
+-            return False
+-        dictionary = {}
+-        dictionary["amount"] = -amount
+-        dictionary["description"] =  "Transfer to "+other.category
+-        self.ledger.append(dictionary)
+-        self.total-=amount
+-        dictionary2 = {}
+-        dictionary2["amount"] = amount
+-        dictionary2["description"] = "Transfer from " + self.category
+-        other.ledger.append(dictionary2)
+-        other.total+=amount
+-        return True
+-    def __str__(self):
+-        string = ""
+-        string = string + self.category.center(30, "*") + '\n'
+-        for action in self.ledger:
+-            amount = f"{float(action['amount']):.2f}"
+-            description = str(action["description"])
+-            description=description[:23]
+-            string = string + description.ljust(30-len(amount))+ amount + '\n'
+-
+-        string=string+"Total: "+f"{float(self.total):.2f}"
+-        return string
+-    def spent(self):
+-        return self.twithdraw
+-
+-def create_spend_chart(categories):
+-    totalspent=0
+-    string=""
+-    category=[]
+-    string=string+"Percentage spent by category"+'\n'
+-    for object in categories:
+-        totalspent+=object.spent()
+-        category.append(object.spent())
+-    procents=[]
+-    for x in category:
+-        procent=(x*100)/totalspent
+-        procents.append(procent)
+-    procents1=[]
+-    for x in procents:
+-        x=(x//10)*10
+-        procents1.append(x)
+-    for index in range(100,-1,-10):
+-        string=string+str(index).rjust(3)+"|"
+-        for k in procents1:
+-            if k>=index:
+-                string=string+" o "
+-            else:
+-                string=string+"   "
+-        string=string+" "
+-        string=string+'\n'
+-    string += "    " + "-" * (3 * len(categories) + 1) + '\n'
+-    lenmax=0
+-    for x in categories:
+-        if len(x.category)>lenmax:
+-            lenmax=len(x.category)
+-    c=0
+-    while c < lenmax:
+-
+-        string=string+"    "
+-        for x in categories:
+-            if c<len(x.category):
+-                string=string+" "+x.category[c]+" "
+-            else:
+-                string=string+"   "
+-        string=string+" "
+-        if c != lenmax - 1:
+-            string += "\n"
+-        c+=1
+-
+-
+-    return  string
+-
+Index: polygonareacalculator.py
+===================================================================
+diff --git a/polygonareacalculator.py b/polygonareacalculator.py
+deleted file mode 100644
+--- a/polygonareacalculator.py	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
++++ /dev/null	(revision 95ee23e699216d6ac0d24e04a9af90ebddbebc78)
+@@ -1,44 +0,0 @@
+-class Rectangle:
+-    def __init__(self,width,height):
+-        self.width=width
+-        self.height=height
+-    def __str__(self):
+-        return f"Rectangle(width={self.width}, height={self.height})"
+-    def set_width(self,width):
+-        self.width=width
+-    def set_height(self,height):
+-        self.height=height
+-    def get_area(self):
+-        return self.width*self.height
+-    def get_perimeter(self):
+-        return 2*self.width+2*self.height
+-    def get_diagonal(self):
+-        return (self.width ** 2 + self.height ** 2) ** .5
+-    def get_picture(self):
+-        if self.width>50 or self.height>50:
+-            return 'Too big for picture.'
+-        string=""
+-        for x in range(self.height):
+-            for y in range(self.width):
+-                string=string+'*'
+-            string=string+'\n'
+-        return string
+-    def get_amount_inside(self,other):
+-        area1= self.get_area()
+-        area2=other.get_area()
+-        return area1//area2
+-
+-class Square(Rectangle):
+-    def __init__(self,height):
+-        Rectangle.__init__(self,height,height)
+-    def __str__(self):
+-        return f"Square(side={self.width})"
+-    def set_side(self,side):
+-        self.height=side
+-        self.width=side
+-    def set_width(self, width):
+-        self.set_side(width)
+-    def set_height(self, height):
+-        self.set_side(height)
+-
+-
